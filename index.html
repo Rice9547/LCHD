@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>寒訓web教學範例 ─ JsGame</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/Init.js"></script>
+	<script src="js/keydown.js"></script>
+	<script src="js/Answer.js"></script>
+	<script type="text/javascript">
+		var data = [];
+		var state = 0;	//0 end 1 start
+		var x, y;
+	</script>
+</head>
+<body>
+    <div>
+        <input name="start" type="button" value="遊戲開始" onclick="Init()">
+        <input type="button" value="解答" onclick="Ans()">
+    </div>
+    <div id="intro">
+    	<h2>遊戲規則</h2>
+    	<p>遊戲開始後會出現9個方塊，分別為1~8或空白<br>可以使用方向鍵控制方塊移動，每次只會將空白的上、下、左、右(依照你所按的鍵而定)的一個方塊移至空白區<br>遊戲目標為讓方塊呈現下面的擺法(九宮格缺九的圖示)</p>
+    	<p>下面為可贏得遊戲的擺法<br>123<br>456<br>78</p>
+    </div>
+    <div id="Main">
+    </div>
+</body>
+</html>
